@@ -59,3 +59,9 @@ if (${BUILD_EXAMPLE})
     target_link_libraries(example lib)
     set(VS_STARTUP_PROJECT example)
 endif()
+
+# reharper style settings
+
+if(EXISTS ${CMAKE_SOURCE_DIR}/dependencies/cpp-style-settings)
+    add_subdirectory(dependencies/cpp-style-settings EXCLUDE_FROM_ALL)
+endif()
